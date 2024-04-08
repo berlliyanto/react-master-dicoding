@@ -14,7 +14,7 @@ describe('categorySlice reducer', () => {
   it('should return the initial state', () => {
     const initialState = [];
     const newState = categoryReducer(undefined, {});
-    expect(newState).toEqual(2);
+    expect(newState).toEqual(initialState);
   });
 
   it('should handle setCategory action', () => {
@@ -25,6 +25,6 @@ describe('categorySlice reducer', () => {
     ];
     const action = setCategory(data);
     const newState = categoryReducer(initialState, action);
-    expect(newState).toEqual(['Category 1', 'Category 2',2]);
+    expect(newState).toEqual(['Category 1', 'Category 2']);
   });
 });
