@@ -8,6 +8,7 @@ const Divider = ({ margin = 5 }) => {
       orientation="horizontal"
       className="w-full bg-slate-300 h-[1px]"
       style={{ marginTop: margin, marginBottom: margin }}
+      data-testid="divider"
     />
   );
 };
