@@ -9,7 +9,7 @@ export const postComment = createAsyncThunk(
     const commentService = new CommentService();
     const { status } = await commentService.storeComment({
       id,
-      content: comment,
+      data: comment,
     });
     if (status === 200 || status === 201) {
       window.location.reload();
