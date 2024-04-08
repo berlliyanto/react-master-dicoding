@@ -1,8 +1,11 @@
 import BaseServices from "./baseService";
 
 class CommentService extends BaseServices {
-  async storeComment ({ id, data }) {
-    return this.post(`/threads/${id}/comments`, data);
+  async storeComment({ id, data }) {
+    return this.post({
+      route: `/threads/${id}/comments`,
+      data: { content: data },
+    });
   }
 }
 
